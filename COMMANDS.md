@@ -75,3 +75,7 @@ Create a deployment out of a config file.
 ## `kubectl delete deployment [depl_name]`
 Delete a deployment.  
 *Ex.:* `kubectl delete deployment posts-depl`  
+
+## `kubectl rollout restart deployment [depl_name]`
+Updating the image used by a deployment.  
+*Ex.:* `kubectl rollout restart deployment posts-depl`  

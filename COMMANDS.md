@@ -54,3 +54,24 @@ Tells kubernetes to process the config.
 ## `kubectl describe pod [pod_name]`
 Print out some information about the running pod.  
 *Ex.:* `kubectl describe pod posts`  
+
+<br />
+<br />
+
+# Some **Kubernetes**\(K8s\) **Deployment** commands
+
+## `kubectl get deployments`
+List all the running deployments.  
+*Ex.:* `kubectl get deployments`  
+
+## `kubectl describe deployment [depl mane]`
+Print out details about a specific deployment.  
+*Ex.:* `kubectl describe deployment posts-depl`  
+
+## `kubectl apply -f [config file name]`
+Create a deployment out of a config file.  
+*Ex.:* `kubectl apply -f posts-depl.yaml`  
+
+## `kubectl delete deployment [depl_name]`
+Delete a deployment.  
+*Ex.:* `kubectl delete deployment posts-depl`  

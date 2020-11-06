@@ -79,3 +79,18 @@ Delete a deployment.
 ## `kubectl rollout restart deployment [depl_name]`
 Updating the image used by a deployment.  
 *Ex.:* `kubectl rollout restart deployment posts-depl`  
+
+## `kubectl get services`
+Print out a list of services running on deployment.  
+*Ex.:* `kubectl get services`  
+
+## `kubectl describe service [srv_name]`
+Print out a bunch of information about a running service.  
+*Ex.:* `kubectl describe service posts-srv`  
+
+## `minikube ip`
+Print out the actual ip used for minikube.  
+
+## Access a service from browser
+To access a Kubernetes service from outside using browser simple catch the minikube ip just with a command above and use like below.  
+*Ex.:* ***\<minikube ip\>:3xxxx/posts***  

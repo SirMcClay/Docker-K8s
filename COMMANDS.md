@@ -161,3 +161,11 @@ kubectl describe ingress
 kubectl explain ingresses --api-version=networking.k8s.io/v1
 
 kubectl get svc
+
+kubectl get namespace
+kubectl get services -n <namespace>
+ex: kubectl get services -n ingress-nginx
+
+**To reach a ingress-nginx from another service**
+http://<name-service>.<namespace>.svc.cluster.local/<endpoint_to_fetch>
+ex: http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser

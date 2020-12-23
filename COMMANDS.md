@@ -169,3 +169,6 @@ ex: kubectl get services -n ingress-nginx
 **To reach a ingress-nginx from another service**
 http://<name-service>.<namespace>.svc.cluster.local/<endpoint_to_fetch>
 ex: http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser
+
+**To port forwarding to a specific pod inside a k8s cluster**
+kubectl port-forward <pod_name> <portOnLocalMachine>:<portOnPodToAccess>

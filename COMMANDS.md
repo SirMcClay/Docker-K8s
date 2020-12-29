@@ -1,10 +1,10 @@
 # Some **Docker** commands
 
-## `docker build -t`
+## `docker build -t <repository/project> .`
 
 Build an image based on the dockefile in the current directory.  
 Tag it as 'stephengrider/posts'.  
-_Ex.:_ `docker build -t stephengrider/posts`
+_Ex.:_ `docker build -t stephengrider/posts .`
 
 ## `docker push user/image:tag`
 

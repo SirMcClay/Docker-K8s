@@ -172,3 +172,25 @@ ex: http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/cu
 
 **To port forwarding to a specific pod inside a k8s cluster**
 kubectl port-forward <pod_name> <portOnLocalMachine>:<portOnPodToAccess>
+
+**Check the Ingress Resource Events**
+$ kubectl get ing -n <namespace-of-ingress-resource>
+$ kubectl describe ing <ingress-resource-name> -n <namespace-of-ingress-resource>
+
+**Check the Ingress Controller Logs**
+$ kubectl get pods -n <namespace-of-ingress-controller>
+ex:
+NAME READY STATUS RESTARTS AGE
+nginx-ingress-controller-67956bf89d-fv58j 1/1 Running 0 1m
+
+$ kubectl logs -n <namespace> nginx-ingress-controller-67956bf89d-fv58j
+
+**Check the Nginx Configuration**
+$ kubectl get pods -n <namespace-of-ingress-controller>
+ex:
+NAME READY STATUS RESTARTS AGE
+nginx-ingress-controller-67956bf89d-fv58j 1/1 Running 0 1m
+$ kubectl exec -it -n <namespace-of-ingress-controller>
+
+**Check if used Services Exist**
+$ kubectl get svc --all-namespaces
